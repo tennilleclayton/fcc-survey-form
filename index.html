@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My FreeCodeCamp Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 id="title">FreeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform.</p>
+        <form id="survey-form">
+            <fieldset>
+                <label id="name-label" for="name">Name<input id="name" type="text" placeholder="Enter your name" required/></label>
+                <label id="email-label" for="email">Email<input id="email" type="email" placeholder="Enter your email" pattern=".+@example\.com" required/></label>
+                <label id="number-label" for="number">Age <span>(optional)</span><input id="number" type="number" placeholder="Age" min="10" max="120"/></label>
+                <label id="dropdown-label" for="dropdown">Dropdown list
+                    <select id="dropdown" name="dropdown-select">
+                        <option value="">--Select Item--</option><option value="item-1">Item 1</option>
+                        <option value="item-2">Item 2</option>
+                    </select>
+                </label>
+                
+            </fieldset>
+            <fieldset>
+                <legend>What would you like to see improved? <span>(Check all that apply)</span></legend>
+                <label id="frontend-label" for="frontend">
+                    <input id="frontend" name="improvement" type="checkbox" value="frontend"> Front-end Projects
+                </label>
+                <label id="backend-label" for="backend">
+                    <input id="backend" name="improvement" type="checkbox" value="backend"> Back-end Projects
+                </label>
+                <label id="dataviz-label" for="dataviz">
+                    <input id="dataviz" name="improvement" type="checkbox" value="dataviz"> Data Visualization
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                <label for="recommend-yes">
+                    <input id="recommend-yes" name="recommend" type="radio" value="yes" checked> Yes
+                </label>
+                <label for="recommend-maybe">
+                    <input id="recommend-maybe" name="recommend" type="radio" value="maybe"> Back-end Projects
+                </label>
+                <label for="recommend-no">
+                    <input id="recommend-no" name="recommend" type="radio" value="no"> No
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="comments">Provide a comments:
+                    <textarea id="comments" name="comments" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+                  </label>
+            </fieldset>
+            <input id="submit" type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
